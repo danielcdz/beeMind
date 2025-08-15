@@ -18,29 +18,26 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">
-              Home
+              Inicio
             </a>
             <a href="#courses" className="text-foreground hover:text-primary transition-colors">
-              Courses
+              Cursos
             </a>
             <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
-              Pricing
+              Precios
             </a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              About
+              Información
             </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
+              Contacto
             </a>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
             <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-              Get Started
+              Iniciar
             </Button>
           </div>
 
@@ -54,26 +51,23 @@ const Header = () => {
         {isMenuOpen && <div className="md:hidden mt-4 py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-foreground hover:text-primary transition-colors">
-                Home
+                Inicio
               </a>
               <a href="#courses" className="text-foreground hover:text-primary transition-colors">
-                Courses
+                Cursos
               </a>
               <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
-                Pricing
+                Precios
               </a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors">
-                About
+                Información
               </a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-                Contact
+                Contacto
               </a>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
-                  Sign In
-                </Button>
                 <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-                  Get Started
+                  Iniciar
                 </Button>
               </div>
             </nav>
