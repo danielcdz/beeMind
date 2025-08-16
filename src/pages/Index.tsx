@@ -16,7 +16,7 @@ const Index = () => {
       </main>
       <footer className="bg-foreground text-background py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 EnglishMaster. All rights reserved.</p>
+          <p>&copy; 2025 BeeMind. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

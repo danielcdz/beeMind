@@ -5,57 +5,51 @@ import { Check, Crown, Zap } from "lucide-react";
 const Pricing = () => {
   const plans = [
     {
-      name: "Basic",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for beginners starting their English journey",
+      name: "Basico",
+      price: "₡25,000",
+      period: "/mes",
+      description: "Perfecto para principiantes que quieren empezar su viaje de aprendizaje de inglés",
       icon: <Zap className="w-6 h-6" />,
       features: [
-        "Access to basic courses",
-        "Weekly progress reports",
-        "Community forum access",
-        "Mobile app access",
-        "Email support"
+        "Acceso a materiales de ingles basico",
+        "1 clase individual por semana",
+        "Acceso a foro de la comunidad",
       ],
       popular: false,
-      buttonText: "Get Started"
+      buttonText: "Inicia ahora"
     },
     {
       name: "Pro",
-      price: "$59",
-      period: "/month",
-      description: "Ideal for serious learners who want comprehensive features",
+      price: "₡45,000",
+      period: "/mes",
+      description: "Ideal para estudiantes que quieren un inglés profesional",
       icon: <Crown className="w-6 h-6" />,
       features: [
-        "All Basic features",
-        "Advanced courses & materials",
-        "1-on-1 tutoring sessions (2/month)",
-        "Personalized learning path",
-        "Priority support",
-        "Certificate of completion",
-        "Practice tests & assessments"
+        "Acceso a materiales de ingles intermedio",
+        "2 clases individuales por semana",
+        "Acceso a foro de la comunidad",
+        "Acceso a materiales de ingles avanzado",
+        "Talleres conversacionales"
       ],
       popular: true,
-      buttonText: "Choose Pro"
+      buttonText: "Escoge Pro"
     },
     {
       name: "Premium",
-      price: "$99",
-      period: "/month",
-      description: "Complete mastery package for professional development",
+      price: "₡70,000",
+      period: "/mes",
+      description: "Plan intensivo para estudiantes que quieren aprender ingles de manera rapida",
       icon: <Crown className="w-6 h-6" />,
       features: [
-        "All Pro features",
-        "Unlimited 1-on-1 tutoring",
-        "Business English specialization",
-        "IELTS/TOEFL exam preparation",
-        "Native speaker conversation practice",
-        "Custom curriculum design",
-        "24/7 premium support",
-        "Job placement assistance"
+        "Acceso a materiales de ingles avanzado",
+        "3 clases individuales por semana",
+        "Acceso a foro de la comunidad",
+        "Talleres conversacionales",
+        "Seguimiento exclusivo",
+        "Materiales didacticos",
       ],
       popular: false,
-      buttonText: "Go Premium"
+      buttonText: "Inicia Premium"
     }
   ];
 
@@ -68,10 +62,10 @@ const Pricing = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Choose Your Learning Path
+            Elige tu plan
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Select the perfect plan for your English learning journey. All plans include access to our proven methodology.
+            Selecciona el plan perfecto para tu viaje de aprendizaje de inglés. Todos los planes incluyen acceso a nuestra metodología probada.
           </p>
         </div>
 
@@ -79,14 +73,14 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <Card 
               key={plan.name}
-              className={`relative shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 ${
+              className={`relative shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 flex flex-col ${
                 plan.popular ? 'ring-2 ring-primary scale-105' : ''
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                    Most Popular
+                    Popular
                   </div>
                 </div>
               )}
@@ -107,8 +101,8 @@ const Pricing = () => {
                 <p className="text-muted-foreground">{plan.description}</p>
               </CardHeader>
 
-              <CardContent className="pt-0">
-                <ul className="space-y-3 mb-8">
+              <CardContent className="pt-0 flex-1 flex flex-col">
+                <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <Check className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
@@ -118,7 +112,7 @@ const Pricing = () => {
                 </ul>
 
                 <Button 
-                  className={`w-full py-6 text-lg font-medium transition-all duration-300 ${
+                  className={`w-full py-6 text-lg font-medium transition-all duration-300 mt-auto ${
                     plan.popular 
                       ? 'bg-gradient-primary hover:shadow-glow animate-glow' 
                       : 'hover:bg-gradient-primary hover:shadow-glow'
@@ -133,12 +127,12 @@ const Pricing = () => {
 
         <div className="text-center mt-12 animate-fade-in">
           <p className="text-muted-foreground mb-4">
-            All plans come with a 30-day money-back guarantee
+            Todos los planes incluyen un 30 días de garantía de devolución de dinero
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            <span>✓ No setup fees</span>
-            <span>✓ Cancel anytime</span>
-            <span>✓ Instant access</span>
+            <span>✓ No hay costos de matricula</span>
+            <span>✓ Cancelar en cualquier momento</span>
+            <span>✓ Acceso instantáneo</span>
           </div>
         </div>
       </div>

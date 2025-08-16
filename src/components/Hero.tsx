@@ -64,7 +64,7 @@ const Hero = () => {
 
             {/* Social Proof */}
             <div className="mt-12 flex flex-wrap justify-center lg:justify-start items-center gap-6 opacity-60">
-              <span className="text-sm text-muted-foreground">Estas universidades confían en nosotros:</span>
+              <span className="text-sm text-muted-foreground">Estudiantes de estas universidades confían en nosotros:</span>
               <div className="flex items-center gap-6">
                 <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">ULatina</div>
                 <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">TEC</div>
