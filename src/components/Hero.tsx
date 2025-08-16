@@ -5,7 +5,7 @@ import teacher from "@/assets/teacher-1.jpeg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
       {/* Background blur effects */}
       <div className="absolute inset-0 bg-background">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-blur rounded-full blur-3xl opacity-70 animate-pulse"></div>
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative animate-fade-in">
+          <div className="relative animate-fade-in p-6 md:p-0">
             <div className="relative rounded-2xl overflow-hidden shadow-glow">
               <img 
                 src={teacher} 
@@ -84,10 +84,10 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
             </div>
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold shadow-glow animate-pulse">
+            <div className="absolute top-2 md:-top-4 right-2 md:-right-4 w-16 md:w-20 h-16 md:h-20 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold shadow-glow animate-pulse text-sm md:text-base">
               1:1
             </div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground font-bold shadow-glow animate-pulse">
+            <div className="absolute bottom-2 md:-bottom-4 left-2 md:-left-4 w-20 md:w-24 h-20 md:h-24 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground font-bold shadow-glow animate-pulse text-sm md:text-base">
               Clases
             </div>
           </div>
