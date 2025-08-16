@@ -92,7 +92,7 @@ const About = () => {
         </div>
 
         {/* Course Levels */}
-        <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-card animate-fade-in">
+        <div id="courses" className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-card animate-fade-in">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">
             Our Course Levels
           </h3>

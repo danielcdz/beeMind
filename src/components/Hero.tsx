@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroClassroom from "@/assets/hero-classroom.jpg";
+import teacher from "@/assets/teacher-1.jpeg";
 
 const Hero = () => {
   return (
@@ -18,34 +19,35 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-gradient-primary rounded-full text-primary-foreground text-sm font-medium mb-6 shadow-glow">
             <Star className="w-4 h-4 mr-2" />
-            #1 English Learning Platform
+            Aprende Inglés a tu ritmo
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Master English
-            <span className="bg-gradient-hero bg-clip-text text-transparent"> Fluently</span>
+            Habla Inglés
+            <span className="bg-gradient-hero bg-clip-text text-transparent"> Fluido</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Unlock your potential with our comprehensive English courses. From beginner to advanced, 
-            we'll guide you to fluency with personalized lessons and expert instruction.
+          Desbloquea tu potencial con nuestro curso de inglés totalmente personalizado con clases 1 a 1, 
+          100% personalizadas y un enfoque conversacional en cada sesión.
+          Habla con confianza desde el primer día.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-foreground mb-1">10,000+</div>
-              <div className="text-muted-foreground">Happy Students</div>
+              <div className="text-3xl font-bold text-foreground mb-1">+50</div>
+              <div className="text-muted-foreground">Recursos didácticos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-foreground mb-1">98%</div>
-              <div className="text-muted-foreground">Success Rate</div>
+              <div className="text-3xl font-bold text-foreground mb-1">100%</div>
+              <div className="text-muted-foreground">Acceso a comunidad</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-foreground mb-1">24/7</div>
-              <div className="text-muted-foreground">Support</div>
+              <div className="text-3xl font-bold text-foreground mb-1">100%</div>
+              <div className="text-muted-foreground">Seguimiento personalizado</div>
             </div>
           </div>
 
@@ -55,26 +57,18 @@ const Hero = () => {
               size="lg" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 animate-glow"
             >
-              Start Learning Now
+              Inicia tu plan ahora
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-6 hover:bg-muted transition-all duration-300"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo
             </Button>
           </div>
 
             {/* Social Proof */}
             <div className="mt-12 flex flex-wrap justify-center lg:justify-start items-center gap-6 opacity-60">
-              <span className="text-sm text-muted-foreground">Trusted by students from:</span>
+              <span className="text-sm text-muted-foreground">Estas universidades confían en nosotros:</span>
               <div className="flex items-center gap-6">
-                <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">Cambridge</div>
-                <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">Oxford</div>
-                <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">Harvard</div>
+                <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">ULatina</div>
+                <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">TEC</div>
+                <div className="px-4 py-2 bg-muted rounded-lg text-sm font-medium">UCR</div>
               </div>
             </div>
           </div>
@@ -83,7 +77,7 @@ const Hero = () => {
           <div className="relative animate-fade-in">
             <div className="relative rounded-2xl overflow-hidden shadow-glow">
               <img 
-                src={heroClassroom} 
+                src={teacher} 
                 alt="English learning classroom with diverse students" 
                 className="w-full h-auto object-cover"
               />
@@ -91,10 +85,10 @@ const Hero = () => {
             </div>
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold shadow-glow animate-pulse">
-              98%
+              1:1
             </div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground font-bold shadow-glow animate-pulse">
-              10K+
+              Clases
             </div>
           </div>
         </div>
