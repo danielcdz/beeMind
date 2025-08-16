@@ -1,18 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { BookOpen, Menu, X } from "lucide-react";
 import { useState } from "react";
+import BeeMindLogo from "@/assets/BeeMindLogo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  return <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4 py-4">
+  return     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <span className="text-2xl font-bold text-foreground">BeeMind</span>
+          <div className="flex items-center">
+            <img 
+              src={BeeMindLogo} 
+              alt="BeeMind Logo" 
+              className="h-8 md:h-20 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -36,7 +38,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+            <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}>
               Iniciar
             </Button>
           </div>
@@ -66,7 +68,7 @@ const Header = () => {
                 Contacto
               </a>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+                <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}>
                   Iniciar
                 </Button>
               </div>

@@ -56,6 +56,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 animate-glow"
+              onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}
             >
               Inicia tu plan ahora
               <ArrowRight className="w-5 h-5 ml-2" />
