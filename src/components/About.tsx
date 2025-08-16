@@ -28,10 +28,11 @@ const About = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Why Choose BeeMind?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">¿Por qué elegir BeeMind?</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We've helped thousands of students achieve English fluency through our innovative teaching methods, 
-            personalized approach, and comprehensive curriculum designed for real-world communication.
+          A diferencia de otros cursos de inglés, BeeMind se centra en lo que realmente importa: la conversación.
+          Con clases 1:1 totalmente personalizadas, cada sesión es un espacio dedicado solo a ti y tu profesor, 
+          donde practicas el uso real del idioma y ganas confianza hablando desde el primer momento.
           </p>
         </div>
 
