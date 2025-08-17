@@ -13,7 +13,8 @@ const Header = () => {
             <img 
               src={BeeMindLogo} 
               alt="BeeMind Logo" 
-              className="h-8 md:h-20 w-auto"
+              className="h-8 md:h-20 w-auto cursor-pointer"
+              onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
             />
           </div>
 
@@ -52,19 +53,19 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden mt-4 py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">
+              <a href="#home" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Inicio
               </a>
-              <a href="#courses" className="text-foreground hover:text-primary transition-colors">
+              <a href="#courses" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Cursos
               </a>
-              <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
+              <a href="#pricing" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Precios
               </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">
+              <a href="#about" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Información
               </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Contacto
               </a>
               <div className="flex flex-col space-y-2 pt-4">
