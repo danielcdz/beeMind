@@ -16,7 +16,8 @@ const Pricing = () => {
         "Acceso a foro de la comunidad",
       ],
       popular: false,
-      buttonText: "Inicia ahora"
+      buttonText: "Inicia ahora",
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan basico!"
     },
     {
       name: "Pro",
@@ -32,7 +33,8 @@ const Pricing = () => {
         "Talleres conversacionales"
       ],
       popular: true,
-      buttonText: "Escoge Pro"
+      buttonText: "Escoge Pro",
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Pro!"
     },
     {
       name: "Premium",
@@ -49,7 +51,8 @@ const Pricing = () => {
         "Materiales didacticos",
       ],
       popular: false,
-      buttonText: "Inicia Premium"
+      buttonText: "Inicia Premium",
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Premium!"
     }
   ];
 
@@ -117,6 +120,7 @@ const Pricing = () => {
                       ? 'bg-gradient-primary hover:shadow-glow animate-glow' 
                       : 'hover:bg-gradient-primary hover:shadow-glow'
                   }`}
+                  onClick={() => window.open(plan.buttonLink, '_blank')}
                 >
                   {plan.buttonText}
                 </Button>
