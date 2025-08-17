@@ -19,13 +19,13 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-gradient-primary rounded-full text-primary-foreground text-sm font-medium mb-6 shadow-glow">
             <Star className="w-4 h-4 mr-2" />
-            Aprende Inglés a tu ritmo
+            Aprende inglés a tu ritmo
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Habla Inglés
-            <span className="bg-gradient-hero bg-clip-text text-transparent"> Fluido</span>
+            Habla inglés
+            <span className="bg-gradient-hero bg-clip-text text-transparent"> fluido</span>
           </h1>
 
           {/* Subheading */}
@@ -56,7 +56,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 animate-glow"
-              onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}
+              onClick={() => window.open('https://wa.me/50672926155?text=¡Hola! Me interesa aprender inglés con BeeMind', '_blank')}
             >
               Inicia tu plan ahora
               <ArrowRight className="w-5 h-5 ml-2" />

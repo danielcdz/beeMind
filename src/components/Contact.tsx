@@ -12,10 +12,10 @@ const Contact = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Contactanos
+            Contáctanos
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Estamos aqui para ayudarte, contactanos y te ayudaremos a empezar tu viaje de aprendizaje de ingles.
+            Estamos aquí para ayudarte, contáctanos y te ayudaremos a empezar tu viaje de aprendizaje de inglés.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ const Contact = () => {
                 </p>
                 <Button 
                   className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 hover:shadow-glow transition-all duration-300 py-6 text-lg text-white"
-                  onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}
+                  onClick={() => window.open('https://wa.me/50672926155?text=¡Hola! Me interesa aprender inglés con BeeMind', '_blank')}
                 >
                   Enviar WhatsApp
                 </Button>
@@ -84,7 +84,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground">Telefono</h3>
+                    <h3 className="font-bold text-foreground">Teléfono</h3>
                     <p className="text-muted-foreground">+506 7292-6155</p>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     <p className="opacity-90">Ofrecemos todos los niveles desde principiante hasta avanzado.</p>
                   </div>
                   <div>
-                    <p className="font-medium mb-2">Como son las clases?</p>
+                    <p className="font-medium mb-2">¿Cómo son las clases?</p>
                     <p className="opacity-90">Las clases son individuales, y se llevan a cabo en un horario flexible, para que puedas elegir el horario que mejor te convenga.</p>
                   </div>
                   <div>

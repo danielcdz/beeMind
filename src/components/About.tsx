@@ -7,7 +7,7 @@ const About = () => {
   const features = [{
     icon: <Clock className="w-8 h-8" />,
     title: "Horario flexible",
-    description: "En BeeMind tu escoges tu horario ya sea que estudies o trabajes nuestras clases son flexibles y se ajustan a tu agenda."
+    description: "En BeeMind tú escoges tu horario ya sea que estudies o trabajes nuestras clases son flexibles y se ajustan a tu agenda."
   }, {
     icon: <HeartHandshake className="w-8 h-8" />,
     title: "Soporte de la comunidad",
@@ -19,7 +19,7 @@ const About = () => {
   }, {
     icon: <GraduationCap className="w-8 h-8" />,
     title: "Profesores capacitados",
-    description: "Profesores altamante capacitados para enseñar inglés de manera efectiva y eficiente."
+    description: "Profesores altamente capacitados para enseñar inglés de manera efectiva y eficiente."
   }];
   return <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Background blur effects */}
@@ -63,8 +63,8 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
             </div>
-            <h4 className="text-xl font-bold text-foreground mb-2">Guia profesional</h4>
-            <p className="text-muted-foreground">Ingles para tu carrera o trabajo</p>
+            <h4 className="text-xl font-bold text-foreground mb-2">Guía profesional</h4>
+            <p className="text-muted-foreground">Inglés para tu carrera o trabajo</p>
           </div>
           <div className="text-center">
             <div className="relative mb-6 rounded-xl overflow-hidden shadow-card">
@@ -75,8 +75,8 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
             </div>
-            <h4 className="text-xl font-bold text-foreground mb-2">Apredizaje flexible</h4>
-            <p className="text-muted-foreground">Aprende donde y cuando quieras, clases 100% en linea</p>
+            <h4 className="text-xl font-bold text-foreground mb-2">Aprendizaje flexible</h4>
+            <p className="text-muted-foreground">Aprende donde y cuando quieras, clases 100% en línea</p>
           </div>
           <div className="text-center">
             <div className="relative mb-6 rounded-xl overflow-hidden shadow-card">
@@ -104,7 +104,7 @@ const About = () => {
               </div>
               <h4 className="text-xl font-bold text-foreground mb-2">Principiante</h4>
               <p className="text-muted-foreground">
-                Aprende los conceptos basicos del idioma, con vocabulario y gramatica basica.
+                Aprende los conceptos básicos del idioma, con vocabulario y gramática básica.
               </p>
             </div>
             <div className="text-center">
@@ -113,7 +113,7 @@ const About = () => {
               </div>
               <h4 className="text-xl font-bold text-foreground mb-2">Intermedio</h4>
               <p className="text-muted-foreground">
-                Aprende a hablar con fluidez, desarrolla un ingles profesional.
+                Aprende a hablar con fluidez, desarrolla un inglés profesional.
               </p>
             </div>
             <div className="text-center">
@@ -122,7 +122,7 @@ const About = () => {
               </div>
               <h4 className="text-xl font-bold text-foreground mb-2">Avanzado</h4>
               <p className="text-muted-foreground">
-                Aprende a hablar como un nativo, lleva tu ingles al siguiente nivel.
+                Aprende a hablar como un nativo, lleva tu inglés al siguiente nivel.
               </p>
             </div>
           </div>

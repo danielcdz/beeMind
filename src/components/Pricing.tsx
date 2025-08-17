@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Crown, Zap } from "lucide-react";
+import { Check, Crown, Zap, Star } from "lucide-react";
 
 const Pricing = () => {
   const plans = [
     {
-      name: "Basico",
+      name: "Básico",
       price: "₡25,000",
       period: "/mes",
       description: "Perfecto para principiantes que quieren empezar su viaje de aprendizaje de inglés",
       icon: <Zap className="w-6 h-6" />,
       features: [
-        "Acceso a materiales de ingles basico",
+        "Acceso a materiales de inglés básico",
         "1 clase individual por semana",
         "Acceso a foro de la comunidad",
       ],
       popular: false,
       buttonText: "Inicia ahora",
-      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan basico!"
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan básico!"
     },
     {
       name: "Pro",
@@ -26,10 +26,10 @@ const Pricing = () => {
       description: "Ideal para estudiantes que quieren un inglés profesional",
       icon: <Crown className="w-6 h-6" />,
       features: [
-        "Acceso a materiales de ingles intermedio",
+        "Acceso a materiales de inglés intermedio",
         "2 clases individuales por semana",
         "Acceso a foro de la comunidad",
-        "Acceso a materiales de ingles avanzado",
+        "Acceso a materiales de inglés avanzado",
         "Talleres conversacionales"
       ],
       popular: true,
@@ -40,15 +40,15 @@ const Pricing = () => {
       name: "Premium",
       price: "₡70,000",
       period: "/mes",
-      description: "Plan intensivo para estudiantes que quieren aprender ingles de manera rapida",
-      icon: <Crown className="w-6 h-6" />,
+      description: "Plan intensivo para estudiantes que quieren aprender inglés de manera rápida",
+      icon: <Star className="w-6 h-6" />,
       features: [
-        "Acceso a materiales de ingles avanzado",
+        "Acceso a materiales de inglés avanzado",
         "3 clases individuales por semana",
         "Acceso a foro de la comunidad",
         "Talleres conversacionales",
         "Seguimiento exclusivo",
-        "Materiales didacticos",
+        "Materiales didácticos",
       ],
       popular: false,
       buttonText: "Inicia Premium",
@@ -131,10 +131,10 @@ const Pricing = () => {
 
         <div className="text-center mt-12 animate-fade-in">
           <p className="text-muted-foreground mb-4">
-            Todos los planes incluyen un 30 días de garantía de devolución de dinero
+            Todos los planes incluyen 30 días de garantía de devolución de dinero
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            <span>✓ No hay costos de matricula</span>
+            <span>✓ No hay costos de matrícula</span>
             <span>✓ Cancelar en cualquier momento</span>
             <span>✓ Acceso instantáneo</span>
           </div>

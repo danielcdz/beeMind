@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}>
+            <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://wa.me/50672926155?text=¡Hola! Me interesa aprender inglés con BeeMind', '_blank')}>
               Iniciar
             </Button>
           </div>
@@ -68,7 +68,7 @@ const Header = () => {
                 Contacto
               </a>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://wa.me/50672926155?text=Hola! Me interesa aprender inglés con BeeMind', '_blank')}>
+                <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://wa.me/50672926155?text=¡Hola! Me interesa aprender inglés con BeeMind', '_blank')}>
                   Iniciar
                 </Button>
               </div>
