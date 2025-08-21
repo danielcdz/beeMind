@@ -1,14 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Crown, Zap, Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Pricing = () => {
+  const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { elementRef: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
+  const { elementRef: footerRef, isVisible: footerVisible } = useScrollAnimation();
   const plans = [
     {
-      name: "Básico",
+      name: "Esencial",
       price: "₡25,000",
       period: "/mes",
-      description: "Perfecto para principiantes que quieren empezar su viaje de aprendizaje de inglés",
+      description: "Perfecto para principiantes que quieren empezar su viaje de aprendizaje de inglés a un ritmo tranquilo",
       icon: <Zap className="w-6 h-6" />,
       features: [
         "Acceso a materiales de inglés básico",
@@ -20,10 +25,10 @@ const Pricing = () => {
       buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan básico!"
     },
     {
-      name: "Pro",
+      name: "Constante",
       price: "₡45,000",
       period: "/mes",
-      description: "Ideal para estudiantes que quieren un inglés profesional",
+      description: "Ideal para estudiantes que quieren un inglés profesional a un ritmo constante con una intensidad moderada",
       icon: <Crown className="w-6 h-6" />,
       features: [
         "Acceso a materiales de inglés intermedio",
@@ -37,10 +42,10 @@ const Pricing = () => {
       buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Pro!"
     },
     {
-      name: "Premium",
+      name: "Intensivo",
       price: "₡70,000",
       period: "/mes",
-      description: "Plan intensivo para estudiantes que quieren aprender inglés de manera rápida",
+      description: "Plan para estudiantes que quieren aprender inglés de manera rápida con una intensidad alta y un ritmo acelerado",
       icon: <Star className="w-6 h-6" />,
       features: [
         "Acceso a materiales de inglés avanzado",
@@ -57,13 +62,13 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 relative overflow-hidden">
+    <section ref={sectionRef} id="pricing" className="py-20 relative overflow-hidden">
       {/* Background blur effects */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-blur rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-blur rounded-full blur-3xl opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
+        <div ref={headerRef} className={`text-center mb-16 animate-fade-in ${headerVisible ? 'visible' : ''}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Elige tu plan
           </h2>
@@ -72,11 +77,11 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div ref={cardsRef} className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto ${cardsVisible ? 'visible' : ''}`}>
           {plans.map((plan, index) => (
             <Card 
               key={plan.name}
-              className={`relative shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 flex flex-col ${
+              className={`relative shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 flex flex-col animate-bounce-in animate-stagger-${index + 1} ${cardsVisible ? 'visible' : ''} ${
                 plan.popular ? 'ring-2 ring-primary scale-105' : ''
               }`}
             >
@@ -129,9 +134,9 @@ const Pricing = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fade-in">
+        <div ref={footerRef} className={`text-center mt-12 animate-fade-in ${footerVisible ? 'visible' : ''}`}>
           <p className="text-muted-foreground mb-4">
-            Todos los planes incluyen 30 días de garantía de devolución de dinero
+            Todos los planes incluyen 7 días de garantía de devolución de dinero
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <span>✓ No hay costos de matrícula</span>

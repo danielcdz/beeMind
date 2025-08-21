@@ -2,10 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroClassroom from "@/assets/hero-classroom.jpg";
 import teacher from "@/assets/teacher-1.jpeg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Hero = () => {
+  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { elementRef: imageRef, isVisible: imageVisible } = useScrollAnimation();
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+    <section ref={heroRef} id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
       {/* Background blur effects */}
       <div className="absolute inset-0 bg-background">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-blur rounded-full blur-3xl opacity-70 animate-pulse"></div>
@@ -15,7 +19,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          <div className="text-center lg:text-left animate-fade-in">
+          <div ref={contentRef} className={`text-center lg:text-left animate-fade-in ${contentVisible ? 'visible' : ''}`}>
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-gradient-primary rounded-full text-primary-foreground text-sm font-medium mb-6 shadow-glow">
             <Star className="w-4 h-4 mr-2" />
@@ -75,7 +79,7 @@ const Hero = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative animate-fade-in p-6 md:p-0">
+          <div ref={imageRef} className={`relative animate-slide-in-right ${imageVisible ? 'visible' : ''} p-6 md:p-0`}>
             <div className="relative rounded-2xl overflow-hidden shadow-glow">
               <img 
                 src={teacher} 

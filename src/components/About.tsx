@@ -1,9 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Users, Clock, HeartHandshake, GraduationCap, Star, Target, Trophy } from "lucide-react";
 import teacherStudent from "@/assets/teacher-student.jpg";
-import onlineLearning from "@/assets/online-learning.jpg";
+import onlineLearning from "@/assets/student-1.jpeg";
 import certification from "@/assets/certification.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 const About = () => {
+  const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { elementRef: featuresRef, isVisible: featuresVisible } = useScrollAnimation();
+  const { elementRef: imagesRef, isVisible: imagesVisible } = useScrollAnimation();
+  const { elementRef: levelsRef, isVisible: levelsVisible } = useScrollAnimation();
   const features = [{
     icon: <Clock className="w-8 h-8" />,
     title: "Horario flexible",
@@ -21,13 +28,13 @@ const About = () => {
     title: "Profesores capacitados",
     description: "Profesores altamente capacitados para enseñar inglés de manera efectiva y eficiente."
   }];
-  return <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+  return <section ref={sectionRef} id="about" className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Background blur effects */}
       <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-blur rounded-full blur-3xl opacity-40"></div>
       <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-blur rounded-full blur-3xl opacity-30"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
+        <div ref={headerRef} className={`text-center mb-16 animate-fade-in ${headerVisible ? 'visible' : ''}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">¿Por qué elegir BeeMind?</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           A diferencia de otros cursos de inglés, BeeMind se centra en lo que realmente importa: la conversación.
@@ -36,8 +43,12 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => <Card key={index} className="text-center shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm">
+        <div ref={featuresRef} className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 ${featuresVisible ? 'visible' : ''}`}>
+          {features.map((feature, index) => (
+            <Card 
+              key={index} 
+              className={`text-center shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm animate-fade-in animate-stagger-${index + 1} ${featuresVisible ? 'visible' : ''}`}
+            >
               <CardContent className="pt-8 pb-6">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
                   {feature.icon}
@@ -49,12 +60,13 @@ const About = () => {
                   {feature.description}
                 </p>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         {/* Feature Images Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center">
+        <div ref={imagesRef} className={`grid md:grid-cols-3 gap-8 mb-16 ${imagesVisible ? 'visible' : ''}`}>
+          <div className={`text-center animate-slide-in-left animate-stagger-1 ${imagesVisible ? 'visible' : ''}`}>
             <div className="relative mb-6 rounded-xl overflow-hidden shadow-card">
               <img 
                 src={teacherStudent} 
@@ -66,7 +78,7 @@ const About = () => {
             <h4 className="text-xl font-bold text-foreground mb-2">Guía profesional</h4>
             <p className="text-muted-foreground">Inglés para tu carrera o trabajo</p>
           </div>
-          <div className="text-center">
+          <div className={`text-center animate-fade-in animate-stagger-2 ${imagesVisible ? 'visible' : ''}`}>
             <div className="relative mb-6 rounded-xl overflow-hidden shadow-card">
               <img 
                 src={onlineLearning} 
@@ -78,7 +90,7 @@ const About = () => {
             <h4 className="text-xl font-bold text-foreground mb-2">Aprendizaje flexible</h4>
             <p className="text-muted-foreground">Aprende donde y cuando quieras, clases 100% en línea</p>
           </div>
-          <div className="text-center">
+          <div className={`text-center animate-slide-in-right animate-stagger-3 ${imagesVisible ? 'visible' : ''}`}>
             <div className="relative mb-6 rounded-xl overflow-hidden shadow-card">
               <img 
                 src={certification} 
@@ -93,7 +105,7 @@ const About = () => {
         </div>
 
         {/* Course Levels */}
-        <div id="courses" className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-card animate-fade-in">
+        <div ref={levelsRef} id="courses" className={`bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-card animate-scale-in ${levelsVisible ? 'visible' : ''}`}>
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">
             Nuestros niveles
           </h3>

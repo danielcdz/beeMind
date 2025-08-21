@@ -1,16 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background blur effects */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-blur rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-blur rounded-full blur-3xl opacity-30"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
+  const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { elementRef: actionCardsRef, isVisible: actionCardsVisible } = useScrollAnimation();
+  const { elementRef: contactInfoRef, isVisible: contactInfoVisible } = useScrollAnimation();
+  const { elementRef: faqRef, isVisible: faqVisible } = useScrollAnimation();
+      return (
+      <section ref={sectionRef} id="contact" className="py-20 relative overflow-hidden">
+        {/* Background blur effects */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-blur rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-blur rounded-full blur-3xl opacity-30"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div ref={headerRef} className={`text-center mb-16 animate-fade-in ${headerVisible ? 'visible' : ''}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Contáctanos
           </h2>
@@ -21,8 +27,8 @@ const Contact = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Action Buttons */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Card className="shadow-card hover:shadow-glow transition-all duration-300 bg-card/80 backdrop-blur-sm">
+          <div ref={actionCardsRef} className={`grid md:grid-cols-2 gap-6 mb-12 ${actionCardsVisible ? 'visible' : ''}`}>
+            <Card className={`shadow-card hover:shadow-glow transition-all duration-300 bg-card/80 backdrop-blur-sm animate-slide-in-left animate-stagger-1 ${actionCardsVisible ? 'visible' : ''}`}>
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
                   <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
@@ -42,7 +48,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-glow transition-all duration-300 bg-card/80 backdrop-blur-sm">
+            <Card className={`shadow-card hover:shadow-glow transition-all duration-300 bg-card/80 backdrop-blur-sm animate-slide-in-right animate-stagger-2 ${actionCardsVisible ? 'visible' : ''}`}>
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground mx-auto mb-4">
                   <Mail className="w-8 h-8" />
@@ -62,8 +68,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <Card className="shadow-card bg-card/80 backdrop-blur-sm">
+          <div ref={contactInfoRef} className={`grid md:grid-cols-2 gap-6 max-w-2xl mx-auto ${contactInfoVisible ? 'visible' : ''}`}>
+            <Card className={`shadow-card bg-card/80 backdrop-blur-sm animate-fade-in animate-stagger-1 ${contactInfoVisible ? 'visible' : ''}`}>
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
@@ -77,7 +83,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card bg-card/80 backdrop-blur-sm">
+            <Card className={`shadow-card bg-card/80 backdrop-blur-sm animate-fade-in animate-stagger-2 ${contactInfoVisible ? 'visible' : ''}`}>
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
@@ -93,8 +99,8 @@ const Contact = () => {
           </div>
 
           {/* FAQ Section */}
-          <div className="mt-12">
-            <Card className="shadow-card bg-gradient-primary text-primary-foreground">
+          <div ref={faqRef} className={`mt-12 ${faqVisible ? 'visible' : ''}`}>
+            <Card className={`shadow-card bg-gradient-primary text-primary-foreground animate-scale-in ${faqVisible ? 'visible' : ''}`}>
               <CardContent className="p-8">
                 <h3 className="font-bold text-2xl mb-6 text-center">Preguntas Frecuentes</h3>
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
