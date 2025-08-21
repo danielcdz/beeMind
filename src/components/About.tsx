@@ -103,42 +103,6 @@ const About = () => {
             <p className="text-muted-foreground">BeeMind es para todos, desde principiantes hasta avanzados</p>
           </div>
         </div>
-
-        {/* Course Levels */}
-        <div ref={levelsRef} id="courses" className={`bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-card animate-scale-in ${levelsVisible ? 'visible' : ''}`}>
-          <h3 className="text-3xl font-bold text-center text-foreground mb-8">
-            Nuestros niveles
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
-                <Star className="w-10 h-10" />
-              </div>
-              <h4 className="text-xl font-bold text-foreground mb-2">Principiante</h4>
-              <p className="text-muted-foreground">
-                Aprende los conceptos básicos del idioma, con vocabulario y gramática básica.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
-                <Target className="w-10 h-10" />
-              </div>
-              <h4 className="text-xl font-bold text-foreground mb-2">Intermedio</h4>
-              <p className="text-muted-foreground">
-                Aprende a hablar con fluidez, desarrolla un inglés profesional.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
-                <Trophy className="w-10 h-10" />
-              </div>
-              <h4 className="text-xl font-bold text-foreground mb-2">Avanzado</h4>
-              <p className="text-muted-foreground">
-                Aprende a hablar como un nativo, lleva tu inglés al siguiente nivel.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>;
 };
