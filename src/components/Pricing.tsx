@@ -22,7 +22,7 @@ const Pricing = () => {
       ],
       popular: false,
       buttonText: "Inicia Esencial",
-      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan básico!"
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Esencial!"
     },
     {
       name: "Constante",
@@ -39,7 +39,7 @@ const Pricing = () => {
       ],
       popular: true,
       buttonText: "Inicia Constante",
-      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Pro!"
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Constante!"
     },
     {
       name: "Intensivo",
@@ -57,7 +57,7 @@ const Pricing = () => {
       ],
       popular: false,
       buttonText: "Inicia Intensivo",
-      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Premium!"
+      buttonLink: "https://wa.me/50672926155?text=Hola! Me interesa aprender inglés en BeeMind con el plan Intensivo!"
     }
   ];
 
