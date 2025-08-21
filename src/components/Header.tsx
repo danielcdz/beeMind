@@ -23,9 +23,6 @@ const Header = () => {
             <a href="#home" className="text-foreground hover:text-primary transition-colors">
               Inicio
             </a>
-            <a href="#courses" className="text-foreground hover:text-primary transition-colors">
-              Cursos
-            </a>
             <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
               Precios
             </a>
@@ -51,13 +48,10 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && <div className="md:hidden mt-4 py-4 border-t border-border animate-fade-in">
+        {isMenuOpen && <div className="md:hidden mt-4 py-4 border-t border-border animate-fade-in visible">
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Inicio
-              </a>
-              <a href="#courses" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
-                Cursos
               </a>
               <a href="#pricing" className="text-foreground hover:text-primary transition-colors" onClick={toggleMenu}>
                 Precios
