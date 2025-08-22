@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Users, Clock, HeartHandshake, GraduationCap, Star, Target, Trophy } from "lucide-react";
-import teacherStudent from "@/assets/teacher-student.jpg";
+import teacherStudent from "@/assets/class-1.jpeg";
 import onlineLearning from "@/assets/student-1.jpeg";
-import certification from "@/assets/certification.jpg";
+import certification from "@/assets/teacher-2.jpeg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const About = () => {

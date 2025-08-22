@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroClassroom from "@/assets/hero-classroom.jpg";
-import teacher from "@/assets/teacher-1.jpeg";
+import teacher from "@/assets/teacher-7.jpeg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Hero = () => {
